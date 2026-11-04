@@ -1,0 +1,6 @@
+{
+  "name": "SecretGift – Anonymous Gift Exchange",
+  "description": "A modern, mysterious, and festive full-stack gift exchange platform. Create private gift groups, draw secret recipients with automatic Derangement algorithm, manage wishlists, and reveal assignments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
