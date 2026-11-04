@@ -116,21 +116,30 @@ The application is designed to feel:
 
 ```text
 secretgift/
-│
-├── client/                 # Frontend
-│   ├── src/
+├── client/                     # React + Vite Frontend
 │   ├── public/
-│   └── package.json
+│   ├── src/
+│   │   ├── api/                # Typed Fetch API client
+│   │   ├── assets/             # Generated photographic hero & mystery assets
+│   │   ├── components/         # Navbar, Countdown, SecretCard, Wishlist, etc.
+│   │   ├── context/            # AuthContext (JWT, state, demo switcher)
+│   │   ├── types/              # TypeScript data interfaces
+│   │   ├── App.tsx             # Root layout controller
+│   │   ├── index.css           # Tailwind CSS v4 styling & color definitions
+│   │   └── main.tsx            # React DOM mounting
+│   ├── index.html              # HTML entry point with Plus Jakarta Sans & Outfit fonts
+│   ├── package.json
+│   └── vite.config.ts          # Vite configuration with /api backend proxy
 │
-├── server/                 # Backend
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   ├── server.js
-│   └── package.json
-│
-└── README.md
+└── server/                     # Node.js + Express Backend
+    ├── middleware/             # JWT auth verification middleware
+    ├── models/                 # Mongoose schemas (User, Group, Wishlist)
+    ├── routes/                 # Express API routers (auth, groups, wishlist)
+    ├── utils/                  # Derangement pairing algorithm
+    ├── store.ts                # Dual-mode store (MongoDB Atlas + reliable persistent fallback)
+    ├── server.ts               # Express application entry point
+    ├── .env.example            # Environment variables template
+    └── package.json
 ```
 
 ---
